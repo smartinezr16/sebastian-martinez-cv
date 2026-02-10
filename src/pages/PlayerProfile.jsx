@@ -38,7 +38,7 @@ export default function PlayerProfile() {
     peso: "63 kg",
     categoria: "2011 Fuerzas Básicas",
     club: "Fortaleza FC",
-    piernaHabil: "Derecha", // ✅ se mantiene
+    piernaHabil: "Derecha", 
     descripcion:
       "Delantero polifuncional con gran capacidad goleadora y mentalidad competitiva. Destaca por su velocidad, agresividad ofensiva y buena lectura del juego. Jugador con carácter, disciplina y alto compromiso, capaz de marcar diferencia en el último tercio del campo.",
   };
@@ -119,9 +119,23 @@ export default function PlayerProfile() {
           </div>
 
           <div className="pp-social pp-reveal d3">
-            <span>Tik Tok</span>
-            <span>Instagram</span>
+            <a
+              href="https://www.tiktok.com/@vasho.oficial"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tik Tok
+            </a>
+
+            <a
+              href="https://www.instagram.com/vasho.oficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
           </div>
+
         </section>
 
         {/* ⬇️ NUEVAS SECCIONES DEL PERFIL */}
