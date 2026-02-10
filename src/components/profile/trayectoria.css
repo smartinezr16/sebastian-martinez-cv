@@ -1,0 +1,63 @@
+.tray-section{
+  margin-top: 40px;
+}
+
+.tray-title{
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.tray-row{
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 24px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+}
+
+.tray-left{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tray-year{
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.tray-year span{
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.826);
+}
+
+.tray-list{
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tray-list li{
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255,255,255,.85);
+}
+
+.tray-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tray-right img{
+  max-width: 130px;   /* ⬅️ antes 100px */
+  max-height: 130px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
