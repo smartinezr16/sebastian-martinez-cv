@@ -356,3 +356,50 @@
     max-width: 65%;
   }
 }
+/* =========================
+   RESPONSIVE CANCHA (MÓVIL)
+========================= */
+@media (max-width: 520px){
+
+  /* cancha más compacta */
+  .pc-pitch-inner{
+    aspect-ratio: 16 / 10;  /* un poquito más alta en móvil */
+    border-radius: 12px;
+  }
+
+  /* bordes más delgados */
+  .pc-line.pc-border{
+    inset: 10px;
+    border-width: 1.5px;
+    border-radius: 10px;
+  }
+
+  .pc-line.pc-mid{
+    top:8px;
+    bottom:8px;
+    width:1.5px;
+  }
+
+  .pc-circle{
+    border-width: 1.5px;
+  }
+
+  .pc-box,
+  .pc-goal{
+    border-width: 1.5px;
+  }
+
+  /* arco D proporcional */
+  :root{
+    --arc-size: 16%;
+    --arc-y: 50%;
+  }
+
+  /* chips más pequeños */
+  .pc-chip{
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    border-width: 1.5px;
+  }
+}
