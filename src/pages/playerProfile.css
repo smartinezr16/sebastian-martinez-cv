@@ -19,29 +19,35 @@ a{ color:inherit; text-decoration:none; }
 
 /* ✅ Para evitar el “blanco” al final: mismo fondo en el body */
 html, body{
-  min-height:100%;
-  background: linear-gradient(135deg,var(--bg1),var(--bg2) 45%,var(--bg3));
+  min-height: 100%;
+  margin: 0;
+  background:
+    radial-gradient(1200px 700px at 20% 20%, rgba(0, 47, 255, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 75% 25%, rgba(255,255,255,.05), transparent 65%),
+    linear-gradient(135deg,var(--bg1),var(--bg2) 45%,var(--bg3));
 }
+
 
 /* =========================================================
    ROOT
 ========================================================= */
 .pp-root{
-  min-height: 100vh;
+  /* ✅ mejor que 100vh (evita bugs en mobile con barra del navegador) */
+  min-height: 100dvh;
   width: 100%;
+
   color: var(--white);
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 
   /* Fondo completo */
-  background:
-    radial-gradient(1200px 700px at 20% 20%, rgba(0, 47, 255, 0.06), transparent 60%),
-    radial-gradient(900px 500px at 75% 25%, rgba(255,255,255,.05), transparent 65%),
-    linear-gradient(135deg,var(--bg1),var(--bg2) 45%,var(--bg3));
-
+  background: transparent;
   position: relative;
 
-  /* ✅ No bloquees el scroll */
-  overflow-x: hidden;
+  /* ✅ no crees scroll interno */
+  overflow: visible;
+
+  /* ✅ evita scroll horizontal accidental */
+  overflow-x: clip;
 
   /* defaults para fondo reactivo */
   --mx: 50%;
@@ -211,34 +217,6 @@ html, body{
   display: grid;
   gap: 20px;
   margin-top: 0;
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-@media (max-width: 900px){
-  .pp-main{
-    grid-template-columns: 1.15fr .85fr;
-    gap: 16px;
-    padding: 18px 16px 28px;
-  }
-
-  .pp-player-hero{
-    width: clamp(260px, 36vw, 360px);
-    transform: none;
-  }
-
-  .pp-player-img{
-    max-width: 340px;
-  }
-
-  .pp-social{
-    display: none;
-  }
-
-  .pp-info-grid{
-    gap: 14px;
-  }
 }
 
 /* =========================================================
